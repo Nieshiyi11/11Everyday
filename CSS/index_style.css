@@ -1,0 +1,69 @@
+.page-body{
+    display: flex;  /*让<main>和<aside>左右排列*/
+    /*min-height而非height*/
+    min-height: calc(100vh-70px);/*减去导航栏高度 占满剩余屏幕*/
+}
+.content{
+    flex: 1;/*自动占满剩余宽度*/
+    padding: 20px;
+}
+.sidebar{
+    width: 250px;  /*固定宽度*/
+    flex-shrink: 0;  /*剩余宽度不被压缩*/
+    padding: 20px;
+    background-color: #1a1a1a;/*背景颜色和主内容区区分开*/
+    border-left: 1px solid #333;/*左侧加一条分割线*/
+}
+.sidebar-title{
+    font-size: 18px;
+    margin-bottom: 15px;/*标题和下面列表之间留15px间距*/
+    color: #fff;
+}
+.hot-list{
+    list-style: none;  /*去掉默认的小圆点7*/
+    padding: 0;/*<ul>默认有左边内边距（大概40px） 把它清零否则列表会往右缩进一截 */
+}
+.hot-list li{
+    display: flex;/*让排名数字和文字横向排列 否则会垂直排列*/
+    align-items: center;/*排名数字和文字在垂直方向居中对齐不然数字方块可能偏上 文字偏下*/
+    padding: 10px 0;
+    border-bottom: 1px solid1 #333;/*每条热搜之间加上分割线*/
+}
+.hot-list .rank{
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 10px;
+    line-height: 24px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.hot-list a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #ccc;
+}
+.hot-list a:hover{
+    color: #fff;
+}
+/*前三条热搜用醒目的颜色区分开*/
+.hot-list li:nth-child(1) .rank{
+    background-color: #ff4d4f;
+    color: #fff;
+}
+.hot-list li:nth-child(2) .rank{
+    background-color: #ff7a45;
+    color: #fff;
+}
+.hot-list li:nth-child(3) .rank{
+    background-color: #ffa940;
+    color: #fff;
+}
+
+
+
+
+/*主要内容区域*/

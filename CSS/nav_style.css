@@ -1,0 +1,64 @@
+/*基础重置*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*主体部分*/
+body{
+    background-color: black;
+    color:white;
+    font-family: Arial, sans-serif;
+    padding-top: 70px;  /*Q：这里可以不设置padding-top吗？为什么？*/
+}
+
+/*导航栏*/
+.nav{
+    /*布局与大小*/
+    position: fixed;
+    top: 0px;
+    left:  0px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;  /*nav中的子元素平分布局*/
+    align-items: center;  /*nav中的子元素垂直居中*/
+    padding: 0 40px;
+    /*色彩与视觉效果*/
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.1); /*降低边框纯度 让光晕当主角*/
+    box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.8);  /*发光效果*/
+/*box-shadow的参数分别代表：水平偏移|垂直偏移|模糊半径|扩散半径*/
+}
+
+/*导航栏LOGO*/
+.nav-logo{
+    color: rgb(157, 204, 246);
+    font-size: 50px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.nav-logo span{
+    color: #1DA1F2;
+}
+
+/*导航栏索引*/
+.nav-links{
+    display: flex;/*flex作用于子元素：让子元素水平排列*/
+    gap:30px;  /*子元素之间间隔2opx距离*/
+    align-items: center;  /*每个子元素都垂直居中*/
+}
+.nav-links span{
+    color: white;  /*“主页”用不同颜色区分开*/
+}
+.nav-links a{
+    /*每一个子元素的色彩与视觉效果*/
+    color:  rgb(157, 204, 246);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    color:#1DA1F2;
+    transform: scale(1.1);  /*字体略微放大*/
+    transition: transform 0.2s ease-in-out;
+}
