@@ -1,0 +1,89 @@
+/*Q: 为什么用max-width: 900px?而不用width：100%？*/
+/*A: 因为代码块如果占满整个屏幕宽度 在大屏幕上一行代码会拉得特别长 很难阅读*/
+/*max-width: 900px;的意思是"最宽不超过 900px"*/
+/*配合 margin: 0 auto;就会居中显示 像Notion、GitHub那样内容集中在中间 两边留白*/
+.code-page{
+    max-width: 900px;
+    margin: 0 auto; /*auto: 左右平分剩余空间 => 实现水平居中*/
+    padding: 20px;
+    padding-top: 90px;/*给导航栏留距离*/
+}
+.code-page h1{
+    color: #fff;
+    margin-bottom: 5px;
+}
+.page-desc{
+    color: #999;
+    margin-bottom: 20px;
+}
+/*按钮样式*/
+.add-btn{
+    padding: 10px 20px;
+    background: transparent;
+    color: #999;
+    border: 1px dashed #555;/*虚线*/
+    border-radius: 8px;
+    cursor: pointer; /*鼠标光标变化*/
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+.add-btn:hover{
+    color: #fff;
+    border-color: #888;
+}
+/*单个代码块*/
+/*由于代码块是由js动态创建的 所以此处应该写code-block的样式*/
+/*js里appendChild会往里面塞code-block*/
+.code-block{
+    background-color: #1a1a1a;
+    border-color: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;  /*让子元素的背景不超过圆角！！*/
+}
+/*代码块顶部栏*/
+.code-header{
+    display: flex;
+    justify-content: space-between; /*两端对齐*/
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #252525;
+    border-bottom: 1px solid #333;
+}
+/*语言选择下拉菜单*/
+.lang-select{
+    background-color: #333;
+    color: #ccc;
+    border:none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+/*删除按钮*/
+.delete-btn{
+    background: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.delete-btn:hover{
+    color:#ff4d4f;
+}
+/*代码输入区*/
+.code-input{
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    background:transparent;
+    color: #e6e6e6;
+    border: none;
+    font-family: 'Consolas','Courier New',monospace;  /*等宽字体*/
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;   /*只允许上下拉伸*/
+    outline: none;    /*去掉点击时的蓝色边框*/
+}

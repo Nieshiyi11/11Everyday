@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>代码托管</title>
     <link rel="stylesheet" href="../CSS/nav_style.css">
+    <link rel="stylesheet" href="../CSS/code_style.css">
 </head>
 <body>
     <!--导航栏-->
@@ -18,5 +19,20 @@
             <a href="contact.html">联系我们</a>
         </div>
     </nav>
+
+    <!--主要内容-->
+    <div class="code-page">
+        <h1>代码托管 Code</h1>
+        <p class="page-desc">Your Key Code.</p>
+        <!--【添加代码块】按钮-->
+        <!--法一：当用户点击这个按钮时 执行addCodeBlock()这个函数-->
+        <!--法二： 当然也可以在js里使用事件监听-->
+        <button class="add-btn" onclick="addCodeBlock()"> ➕新建代码块</button>
+        <!--代码块容器-->
+        <div class="code-container" id="codeContainer">
+            <!--用js代码实现动态添加代码块-->
+        </div>
+    </div>
+    <script src="../JS/code.js"></script>
 </body>
 </html>
