@@ -37,6 +37,9 @@ body{
     font-size: 50px;
     font-weight: 700;
     text-decoration: none;
+    text-shadow: 0 0 10px rgba(100, 149, 237, 0.8), 0 0 20px rgba(100, 149, 237, 0.4);
+                /*水平|垂直|模糊|颜色*/
+    /*两组值的意思是：第一层是近处的强光 第二层是远处的柔光 两层光叠在一起更自然。*/
 }
 .nav-logo span{
     color: #1DA1F2;

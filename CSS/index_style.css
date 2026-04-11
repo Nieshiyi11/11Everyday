@@ -67,3 +67,91 @@
 
 
 /*主要内容区域*/
+/*标语slogan*/
+.slogan{
+    text-align: center;
+    padding: 80px 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /*注意如果写background-color渐变是不会生效的！！*/
+    background: linear-gradient(135deg,#0a0a0a,#1a1a2e);
+}
+.slogan h1{
+    font-size: 60px;
+    color: #fff;
+    letter-spacing: 6px;
+    font-weight: 300;
+    font-family: "Sekuya", system-ui;  /*谷歌Sekuya字体*/
+}
+/*功能卡片*/
+.card{
+    display: block;  /*<a>默认是inline，改成block才有宽高*/
+    padding: 60px 20px;
+    margin-bottom: 20px;  /*卡片之间的距离*/
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-decoration: none;
+    align-items: center;
+    transition: background-color 0.3s,border-color 0.3s;
+}
+.card:hover{
+    background-color: #252525;
+    border-color: #555;
+}
+.card h2{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.card p{
+    color: #999;
+    font-size: 14px;
+}
+/*开发者介绍*/
+.developer{
+    padding: 60px 20px;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: background-color 0.3s,border-color 0.3s;
+}
+.developer:hover{
+    background-color: #252525;
+    border-color: #555;
+}
+.developer h2{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.dev-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.dev-avatar{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;  /*圆*/
+    object-fit: cover; /*图片等比例裁剪 不会变形*/
+    flex-shrink: 0;
+}
+.dev-text h3{
+    color: #fff;
+    margin-bottom: 5px;
+}
+.dev-text p{
+    color: #ccd7eb6f;
+    text-decoration: none;
+    font-size: 14px;
+}
+.dev-text a{
+    color: #cfd9eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+.dev-text a:hover{
+    color: #fff;
+}

@@ -6,7 +6,10 @@
     <title>主页</title>
     <link rel="stylesheet" href="../CSS/nav_style.css">
     <link rel="stylesheet" href="../CSS/index_style.css">
-</head>
+    <!--GoogleFonts-GetFonts(copy)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sekuya&display=swap" rel="stylesheet">
 <body>
     <!--导航栏-->
     <nav class="nav">
@@ -24,8 +27,37 @@
     <div class="page-body">
         <!--主要内容区域-->
         <main class="content">
-            <h1>主要内容区域</h1>
-            <p>这里待会儿放主要内容</p>
+            <!--标语-->
+            <div class="slogan">
+                <h1>Let's Record Now</h1>
+            </div>
+            <!--三张功能卡片-->
+            <a href="code.html" class="card">
+                <h2>代码托管 Code</h2>
+                <p>Hello,World!</p>
+            </a>
+            <a href="TODO.html" class="card">
+                <h2>计划 Plan</h2>
+                <p>为每一个日出而欢欣，为每一个日落而感恩。</p>
+            </a>
+            <a href="treehole.html" class="card">
+                <h2>树洞 Treehole</h2>
+                <p>我们的忧愁会崩解，灵魂会穿梭如风。</p>
+            </a>
+
+            <!--开发者介绍-->
+            <div class="developer">
+                <h2>主理人简介</h2>
+                <div class="dev-info">
+                    <img class="dev-avatar" src="../Img/avatar.jpg" alt="开发者头像">
+                    <div class="dev-text">
+                        <h3>Eleven Nie</h3>
+                        <p>我们终其一生就是要摆脱他人的期待，找到真正的自己。往日暗淡不可追，来日之路光明灿烂。</p>
+                        <a href="https://github.com/Nieshiyi11" target="_blank">Here click👉Eleven's GitHub Account</a>
+                    </div>
+                </div>
+            </div>
+
         </main>
          <!--侧边栏-->
         <aside class="sidebar">
@@ -39,8 +71,6 @@
             </ul>
         </aside>
     </div>
-
-    <!--页脚-->
 
     <!--js文件都放在</body>前面 而不是头部<head>里！！-->
     <script src="../JS/index.js"></script>
