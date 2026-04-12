@@ -84,6 +84,7 @@
     font-family: 'Consolas','Courier New',monospace;  /*等宽字体*/
     font-size: 14px;
     line-height: 1.6;
-    resize: vertical;   /*只允许上下拉伸*/
+    resize: none;   /*禁止用户手动拉伸*/
     outline: none;    /*去掉点击时的蓝色边框*/
+    overflow: hidden; /*隐藏滚动条*/
 }

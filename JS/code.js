@@ -17,7 +17,7 @@ function addCodeBlock(){
         </select>
         <button class="delete-btn" onclick="deleteBlock(this)">❌ 删除</button>
     </div>
-    <textarea class="code-input" placeholder="请在此处写入代码..."></textarea>
+    <textarea class="code-input" placeholder="请在此处写入代码..." oninput="autoResize(this)"></textarea>
     `;
     //this指向这个按钮自己 传给deleteBlock()函数用
 
@@ -31,4 +31,10 @@ function deleteBlock(btn){
     //btn是删除按钮
     //btn.closest('.code-block')往上找到最近的.code-block祖先元素
     btn.closest('.code-block').remove();
+}
+
+/*代码块自动伸缩函数*/
+function autoResize(textarea){
+    textarea.style.height = 'auto';  //先重置高度
+    textarea.style.height = textarea.scrollHeight + 'px'; //再设置成内容实际高度
 }
