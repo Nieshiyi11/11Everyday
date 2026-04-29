@@ -1,6 +1,6 @@
 //异步编程：调用Reddit的api
-async function getHotList() { //async 标记这个函数是异步的
-  try {//try包裹可能出错的代码  因为调用api 如果网络出现了问题就会出错！！
+async function getHotList(){ //async 标记这个函数是异步的
+  try{//try包裹可能出错的代码  因为调用api 如果网络出现了问题就会出错！！
     //只有async函数里面才能用 await
     //fetch(): 浏览器内置的请求工具 向URL发送GET请求
     //?limit=15：URL参数告诉 Reddit"我只要15条数据"
@@ -28,7 +28,7 @@ async function getHotList() { //async 标记这个函数是异步的
       <a href="https://reddit.com${post.data.permalink}" target="_blank">${post.data.title}</a>`;
       ul.appendChild(li);  //把创建的<li>加在<ul>上去
     });
-  } catch (error) {//如果try里面任何一行出错 就跳到这里
+  }catch(error){//如果try里面任何一行出错 就跳到这里
     //error 是错误对象 包含错误信息
     console.error('热搜加载失败：', error);
     //常见的错误：网络断了、URL 错了、JSON 格式不对、数据结构变了

@@ -27,7 +27,7 @@
     display: flex;/*让排名数字和文字横向排列 否则会垂直排列*/
     align-items: center;/*排名数字和文字在垂直方向居中对齐不然数字方块可能偏上 文字偏下*/
     padding: 10px 0;
-    border-bottom: 1px solid1 #333;/*每条热搜之间加上分割线*/
+    border-bottom: 1px solid #333;/*每条热搜之间加上分割线*/
 }
 .hot-list .rank{
     width: 24px;

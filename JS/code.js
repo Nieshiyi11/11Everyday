@@ -15,12 +15,11 @@ function addCodeBlock(){
             <option value="html">HTML</option>
             <option value="css">CSS</option>
         </select>
-        <button class="delete-btn" onclick="deleteBlock(this)">❌ 删除</button>
+        <button class="delete-btn" onclick="deleteBlock(this)">❌ 删除</button>  
     </div>
     <textarea class="code-input" placeholder="请在此处写入代码..." oninput="autoResize(this)"></textarea>
     `;
     //this指向这个按钮自己 传给deleteBlock()函数用
-
 
     //添加到页面
     //getElementById 找到id="codeContainer"的容器
